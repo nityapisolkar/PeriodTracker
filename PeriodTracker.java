@@ -46,6 +46,7 @@ public class PeriodTracker {
             int duration = Integer.parseInt(scanner.nextLine());
             System.out.println("Period logged. ✅");
             periods.add(new PeriodEntry(startDate, duration));
+            periods.sort(Comparator.comparing(PeriodEntry::getStartDate));
         } catch (Exception e) {
             System.out.println("Invalid input.");
         }
