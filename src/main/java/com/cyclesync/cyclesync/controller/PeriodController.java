@@ -17,6 +17,6 @@ public class PeriodController {
 
     @GetMapping("/ping")
     public String ping() {
-        return "✅ Ping is working!";
+        return "✅ spong is working!";
     }
 }
