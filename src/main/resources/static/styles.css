@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+* {
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 0;
+    font-family: "VT323", sans-serif;
+    font-size: 1rem;
+    line-height: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #eacdc2;
+    background-image: 
+        radial-gradient(#b75d69 1.5px, transparent 1.5px),
+        radial-gradient(#b75d69 1.5px, #eacdc2 1.5px);
+    background-size: 44px 44px;
+    background-position: 0 0, 22px 22px;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.container {
+    width: 65%;
+    opacity: 1;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 10px 25px 20px 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 80vh;
+    overflow-y: auto;
+}
+
+h1 {
+  color: #1A1423;
+  font-size: 52px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+:root {
+  --backgroundColor: #eacdc2;   
+  --colorShadeA: #774c60;     
+  --colorShadeB: #a05c70;      
+  --colorShadeC: #b75d69;     
+  --colorShadeD: #e7b3bb;   
+  --colorShadeE: #f6d6d6; 
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--colorShadeA);
+  margin: 0 8% 3.5rem 8%;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: inherit;
+}
+
+button.big-button {
+  display: flex;
+  align-items: center;   /* vertical center */
+  justify-content: center; /* horizontal center */
+  padding: 0.7em 1.8em;
+  border: 2px solid var(--colorShadeA);
+  border-radius: 1em;
+  background: var(--colorShadeE);
+  transform-style: preserve-3d;
+  transition: all 175ms cubic-bezier(0, 0, 1, 1);
+}
+button.big-button::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--colorShadeC);
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.6em 0 0 var(--colorShadeA);
+  transform: translate3d(0, 0.6em, -1em);
+  transition: all 100ms cubic-bezier(0, 0, 1, 1); /* prev 175ms */
+}
+
+button.big-button:hover {
+  background: var(--colorShadeD);
+  transform: translate(0, 0.175em); /*prev 0.375*/
+}
+
+button.big-button:hover::before {
+  transform: translate3d(0, 0.6em, -1em);
+}
+
+button.big-button:active {
+  transform: translate(0em, 0.6em);
+}
+
+button.big-button:active::before {
+  transform: translate3d(0, 0, -1em);
+
+  box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
+}
+
+button.big-button:last-child {
+  margin-bottom: 0;
+}
