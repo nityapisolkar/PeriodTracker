@@ -25,10 +25,10 @@ public class PeriodController {
     }
 
     // for testing vv
-    @GetMapping("/")
-    public String home() {
-        return "✅ Home is working!";
-    }
+    // @GetMapping("/")
+    // public String home() {
+    // return "✅ Home is working!";
+    // }
 
     @GetMapping("/ping")
     public String ping() {
