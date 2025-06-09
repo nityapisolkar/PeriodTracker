@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>CycleSync</title>
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+</head>
+
+<style>
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 100%;
+      border: 1px solid #ddd;
+    }
+    
+    th, td {
+      text-align: left;
+      padding: 8px; 
+    }
+    
+    tr:nth-child(even){background-color: #F7EDE9}
+
+    .section-header{
+        display:flex;
+        justify-content:space-between;
+        margin-bottom:10px;
+        align-items: center;
+    }
+
+    .section-header h3 {
+        line-height: 1;
+    }
+
+    .section-header button {
+        line-height: 1;
+        all: unset;
+        font-size: 30px;
+        background-color: #eacdc2;
+        color: #7b3941;
+        border-radius: 25%;
+        display: flex;
+        flex-direction:row;
+        justify-content: center; /* center horizontally */
+        align-items: center; /* center vertically */
+        width: 50px;
+        height: 50px;
+    }
+
+    .section-header button:hover {
+        background-color: #e3bdaf;
+    }
+ 
+    </style>
+    </head>
+    <body>
+        <div class = "container">
+            <h1>CycleSync</h1>
+            <div class="section-header">
+                <h3>Logged Periods</h3>
+                <button class = "plus-button">+</button>
+            </div>
+        <div style="overflow-x:auto;">
+        <table>
+            <tr>
+            <th>Start Date</th>
+            <th>Duration (days)</th>
+            <th>Symptoms</th>
+            </tr>
+            <tr>
+            <td>1-1-2025</td>
+            <td>5</td>
+            <td>Bloating, acne</td>
+            </tr>
+            <tr>
+            <td>2-1-2025</td>
+            <td>6</td>
+            <td>Fatigue, acne</td>
+            </tr>
+            <tr>
+            <td>3-1-2025</td>
+            <td>6</td>
+            <td>Cramps, mood swings, acne</td>
+            </tr>
+        </table>
+        </div>
+    
+    </body>
+
+</html>
