@@ -171,4 +171,58 @@ button.big-button:last-child {
       box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.2em 0 0 var(--colorShadeB);
     }
   }
+
+  .input-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center; /* center all inputs horizontally */
+  }
+
+  .input-container.has-inputs {
+    margin-bottom: 1.2rem;
+  }
   
+  .input-field {
+    box-sizing: border-box;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #774c60;
+    border-radius: 5px;
+  }
+
+  
+  .input-field.short {
+    flex: 1 1 200px; /* allows growth/shrink with a base of 200px */
+    max-width: 300px;
+  }
+  
+  .input-field.full {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .period-input-container {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  /* for periods.html */
+  .plus-button {
+    line-height: 1;
+    all: unset;
+    font-size: 30px;
+    background-color: #eacdc2;
+    color: #7b3941;
+    border-radius: 25%;
+    display: flex;
+    flex-direction:row;
+    justify-content: center; /* center horizontally */
+    align-items: center; /* center vertically */
+    width: 50px;
+    height: 50px;
+}
+
+.plus-button:hover {
+    background-color: #e3bdaf;
+}

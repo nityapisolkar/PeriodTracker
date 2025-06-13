@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width">
   <title>CycleSync</title>
   <link href="styles.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
@@ -36,25 +37,6 @@
     .section-header h3 {
         line-height: 1;
     }
-
-    .section-header button {
-        line-height: 1;
-        all: unset;
-        font-size: 30px;
-        background-color: #eacdc2;
-        color: #7b3941;
-        border-radius: 25%;
-        display: flex;
-        flex-direction:row;
-        justify-content: center; /* center horizontally */
-        align-items: center; /* center vertically */
-        width: 50px;
-        height: 50px;
-    }
-
-    .section-header button:hover {
-        background-color: #e3bdaf;
-    }
  
     </style>
     </head>
@@ -63,7 +45,8 @@
             <h1>CycleSync</h1>
             <div class="section-header">
                 <h3>Logged Periods</h3>
-                <button class = "plus-button">+</button>
+                <div id = "inputFields"></div>
+                <button class = "plus-button" onclick = "addFnPeriods()">+</button>
             </div>
         <div style="overflow-x:auto;">
         <table>
@@ -93,3 +76,4 @@
     </body>
 
 </html>
+<!-- edit and delete functionality also!!!!!! -->
