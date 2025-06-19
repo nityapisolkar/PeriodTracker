@@ -18,13 +18,17 @@ body {
     overflow: hidden;
     z-index: 0;
     font-family: "VT323", sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 2;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
     min-height: 100vh;
+}
+
+body :not(h1):not(h2):not(h3) {
+  line-height: 1.4; /* or whatever you prefer */
 }
 
 body::before {
@@ -65,6 +69,10 @@ h1 {
   font-size: 52px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+h1:hover {
+  color: #774c60;
 }
 
 h3{
@@ -170,6 +178,10 @@ button.big-button:last-child {
     button.big-button:active::before {
       box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.2em 0 0 var(--colorShadeB);
     }
+
+    .input-field::placeholder {
+      font-size: 0.8rem;
+    }
   }
 
   .input-container {
@@ -189,6 +201,8 @@ button.big-button:last-child {
     font-size: 1rem;
     border: 1px solid #774c60;
     border-radius: 5px;
+    font-family: "VT323", monospace;
+    line-height: 1.4;
   }
 
   
@@ -203,8 +217,9 @@ button.big-button:last-child {
   }
 
   .period-input-container {
-    margin-right: 1rem;
-    margin-left: 1rem;
+    /* margin-right: 1rem;
+    margin-left: 1rem; */
+    float: left;
   }
 
   /* for periods.html */
@@ -226,3 +241,41 @@ button.big-button:last-child {
 .plus-button:hover {
     background-color: #e3bdaf;
 }
+
+.input-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+.input-field.short {
+  flex: 1 1 200px;
+  max-width: calc(50% - 0.5rem); /* two elements with 1rem gap between = 0.5rem per side */
+}
+
+.input-field.full {
+  width: 100%;
+}
+
+/* placeholder TEXT */
+.input-field::placeholder {
+  font-family: "VT323", monospace;
+}
+
+.input-field::-webkit-input-placeholder {
+  font-family: "VT323", monospace;
+}
+
+.input-field::-moz-placeholder {
+  font-family: "VT323", monospace;
+}
+
+.input-field:-ms-input-placeholder {
+  font-family: "VT323", monospace;
+}
+
+.input-field:-moz-placeholder {
+  font-family: "VT323", monospace;
+}
+/* placehodler text */

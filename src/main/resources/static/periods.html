@@ -18,25 +18,59 @@
       border-spacing: 0;
       width: 100%;
       border: 1px solid #ddd;
+      line-height: 1.4;
     }
     
     th, td {
       text-align: left;
       padding: 8px; 
+      line-height: 1.4;
     }
     
     tr:nth-child(even){background-color: #F7EDE9}
+
+    table {
+        table-layout: fixed; /* fixes column widths */
+        width: 100%;
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        width: 25%; /* Start Date */
+        padding-right: 1rem; /* adds some space on right */
+    }
+
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 20%; /* Duration (days) */
+        padding-right: 1rem; /* add some space */
+    }
+
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        width: 55%; /* Symptoms gets remaining width */
+        }
+
 
     .section-header{
         display:flex;
         justify-content:space-between;
         margin-bottom:10px;
         align-items: center;
+        width: 100%;
     }
 
     .section-header h3 {
         line-height: 1;
     }
+
+    #inputFields {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 10px;
+    }
+
  
     </style>
     </head>
@@ -45,9 +79,9 @@
             <h1>CycleSync</h1>
             <div class="section-header">
                 <h3>Logged Periods</h3>
-                <div id = "inputFields"></div>
                 <button class = "plus-button" onclick = "addFnPeriods()">+</button>
             </div>
+            <div id = "inputFields"></div>
         <div style="overflow-x:auto;">
         <table>
             <tr>
@@ -63,12 +97,12 @@
             <tr>
             <td>2-1-2025</td>
             <td>6</td>
-            <td>Fatigue, acne</td>
+            <td>Fatigue, acne, cramps</td>
             </tr>
             <tr>
             <td>3-1-2025</td>
             <td>6</td>
-            <td>Cramps, mood swings, acne</td>
+            <td>My Chemical Romance is an American rock band from New Jersey. The band's current lineup consists of lead vocalist Gerard Way, lead guitarist Ray Toro, rhythm guitarist Frank Iero, and bassist Mikey Way. They are considered one of the most influential rock groups of the 2000s and a major act in the emo and pop-punk genres, despite the band rejecting the former label.</td>
             </tr>
         </table>
         </div>
