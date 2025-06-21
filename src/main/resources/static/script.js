@@ -22,7 +22,7 @@ function addFnIndex() {
                 <input type="text" placeholder="Duration (days)" class="input-field short">
             </div>
             <input type="text" placeholder="Symptoms: mood, acne, bloating, etc." class="input-field full" maxlength="150">
-            <button class="plus-button">+</button>
+            <button class="plus-button" onclick = "logPdFn()">+</button>
             </div>
         `;
     addCountIndex++;
@@ -43,6 +43,7 @@ function addFnPeriods() {
             <input type = "date" placeholder = "Start Date (YYYY-MM-DD)" class = "input-field short">
             <input type = "text" placeholder = "Duration (days)" class = "input-field short">
             <input type = "text" placeholder = "Symptoms: mood, acne, bloating, etc." class = "input-field full" maxlength="150">
+            <button class = "plus-button" onclick = "logPdFn()">Add</button>
         </div>
     `;
     addCountPeriods++;
